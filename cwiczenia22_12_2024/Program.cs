@@ -85,7 +85,7 @@ namespace zad5_5
                     break;
                 else kolory.Push(kolor);
             } while (true);
-            var sortedKolory = kolory.OrderByDescending(x => x).ToList();
+            var sortedKolory = kolory.Reverse().OrderByDescending(x => x).ToList();
             foreach (string e in sortedKolory)
             {
                 
