@@ -33,33 +33,64 @@
 //    }
 //}
 
+//using System;
+//using System.Collections.Generic;
+
+//namespace zad5_2
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            HashSet<string> imiona = new HashSet<string>();
+//            string tekst = "";
+//            do
+//            {
+//                Console.WriteLine("Podaj imie na litere 'A': ");
+//                tekst = Console.ReadLine();
+//                tekst = tekst.ToUpper();
+//                if (tekst == "")
+//                    break;
+//                else
+//                    if (tekst.Substring(0, 1) == "A")
+//                    imiona.Add(tekst);
+//            } while (true);
+//            Console.WriteLine($"unikatowych imion jest {imiona.Count}" + "\n");
+
+//            foreach (string imionaa in imiona)
+//                Console.WriteLine(imionaa);
+
+//        }
+//    }
+//}
+
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
-namespace zad5_2
+namespace zad5_5
 {
     class Program
     {
         static void Main(string[] args)
         {
-            HashSet<string> imiona = new HashSet<string>();
-            string tekst = "";
+            Stack<string> kolory = new Stack<string>();
+            string kolor;
+            int i = 1;
             do
             {
-                Console.WriteLine("Podaj imie na litere 'A': ");
-                tekst = Console.ReadLine();
-                tekst = tekst.ToUpper();
-                if (tekst == "")
+                Console.WriteLine("Podaj kolor zacznij od ulubionego!: ");
+                kolor = Console.ReadLine();
+                if (kolor == "")
                     break;
-                else
-                    if (tekst.Substring(0, 1) == "A")
-                    imiona.Add(tekst);
+                else kolory.Push(kolor);
             } while (true);
-            Console.WriteLine($"unikatowych imion jest {imiona.Count}" + "\n");
-            
-            foreach (string imionaa in imiona)
-                Console.WriteLine(imionaa);
-
+            var sortedKolory = kolory.OrderByDescending(x => x).ToList();
+            foreach (string e in sortedKolory)
+            {
+                
+                Console.WriteLine(i++ + ". " + e);
+            }
         }
     }
 }
