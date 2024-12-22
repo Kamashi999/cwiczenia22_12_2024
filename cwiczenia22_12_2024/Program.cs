@@ -64,33 +64,69 @@
 //    }
 //}
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
+//using System;
+//using System.Collections.Generic;
+//using System.Linq;
 
-namespace zad5_5
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Stack<string> kolory = new Stack<string>();
-            string kolor;
-            int i = 1;
-            do
-            {
-                Console.WriteLine("Podaj kolor zacznij od ulubionego!: ");
-                kolor = Console.ReadLine();
-                if (kolor == "")
-                    break;
-                else kolory.Push(kolor);
-            } while (true);
-            var sortedKolory = kolory.Reverse().OrderByDescending(x => x).ToList();
-            foreach (string e in sortedKolory)
-            {
-                
-                Console.WriteLine(i++ + ". " + e);
-            }
-        }
-    }
-}
+//namespace zad5_5
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            Stack<string> kolory = new Stack<string>();
+//            string kolor;
+//            int i = 1;
+//            do
+//            {
+//                Console.WriteLine("Podaj kolor zacznij od ulubionego!: ");
+//                kolor = Console.ReadLine();
+//                if (kolor == "")
+//                    break;
+//                else kolory.Push(kolor);
+//            } while (true);
+//            var sortedKolory = kolory.Reverse().OrderByDescending(x => x).ToList();
+//            foreach (string e in sortedKolory)
+//            {
+
+//                Console.WriteLine(i++ + ". " + e);
+//            }
+//        }
+//    }
+//}
+
+//using System;
+//using System.Collections;
+
+//namespace zad5_1
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            ArrayList zakupy = new ArrayList();
+//            string co = "";
+//            int co2, suma = 0 ;
+
+//            do
+//            {
+//                Console.WriteLine("podaj nazwe owocu lub kwote zapłaty (Enter = zakończenie kodu): ");
+//                co = Console.ReadLine();
+//                if (int.TryParse(co, out co2))
+//                    zakupy.Add(co2);
+//                else
+//                    zakupy.Add(co);
+
+//            } while (co != "");
+
+//            foreach (object ob in zakupy)
+//                if (ob is int)  
+//                    suma += (int)ob;
+//            Console.WriteLine("Koszt owoców wyniesie: " + suma + " PLN");
+
+           
+
+            
+//        }
+//    }
+//}
